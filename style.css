@@ -1,0 +1,360 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:ital@0;1&display=swap');
+
+
+:root {
+--color-primary: #8B4513; /* Cokelat Tua */
+--color-secondary: #D2B48C; /* Cokelat Muda/Krem */
+--color-background: #FDF5E6; /* Putih Gading */
+--color-text: #4B3832; /* Cokelat Gelap */
+}
+
+/* -- Reset Dasar -- */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'Merriweather', serif;
+color: var(--color-text);
+background-color: var(--color-background);
+text-align: center;
+line-height: 1.6;
+}
+h1, h2, h3 {
+font-family: 'Playfair Display', serif;
+color: var(--color-primary);
+}
+h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 1em; }
+
+/* -- Utility Classes -- */
+.hidden { display: none !important; }
+.section-padded { padding: 40px 20px; }
+
+/* =================================== */
+/* 1. COVER DEPAN */
+/* =================================== */
+.section-cover {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--color-secondary);
+/* Ganti 'cover-bg.jpg' dengan foto Anda dan atur agar terlihat bagus */
+background-image: url('istockphoto-1056806186-170667a.jpg');
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.cover-content {
+background: rgba(255, 255, 255, 0.85);
+padding: 30px;
+border-radius: 10px;
+max-width: 90%;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.greeting {
+font-size: 1.2em;
+color: var(--color-text);
+}
+.guest-name {
+display: block;
+margin: 10px 0 20px;
+font-size: 1.5em;
+font-weight: 700;
+}
+
+/* -- Tombol -- */
+.btn {
+padding: 10px 25px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+text-transform: uppercase;
+font-weight: bold;
+transition: background-color 0.3s;
+}
+.btn-primary {
+background-color: var(--color-primary);
+color: #fff;
+}
+.btn-primary:hover {
+background-color: #A0522D; /* Lighter brown */
+}
+.btn-outline {
+background: transparent;
+border: 2px solid var(--color-primary);
+color: var(--color-primary);
+margin-top: 15px;
+}
+
+/* =================================== */
+/* 2. NAVBAR & MUSIK */
+/* =================================== */
+.main-nav {
+position: sticky;
+top: 0;
+z-index: 1000;
+background-color: rgba(255, 255, 255, 0.95);
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu a {
+color: var(--color-text);
+text-decoration: none;
+margin: 0 10px;
+font-weight: bold;
+}
+.btn-icon {
+background: var(--color-secondary);
+color: var(--color-primary);
+padding: 5px 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* =================================== */
+/* 3. HOME & PASANGAN (MODIFIKASI BACKGROUND) */
+/* =================================== */
+#home { 
+background-image: url('000308-00_ucapan-selamat-menikah-kristen_pasangan-menikah_800x450_cc0-min.jpg'); /* Ganti dengan gambar Anda */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+padding: 80px 20px; 
+min-height: 400px; 
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+/* PERUBAHAN UTAMA DI SINI: OPACITY DIKURANGI DARI 0.7 MENJADI 0.3 */
+#home::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.3); /* Overlay putih sangat transparan (gambar lebih nampak) */
+z-index: 1;
+}
+
+#home h2, #home .quote, #home .couple-detail, #home .ampersand {
+position: relative; 
+z-index: 2;
+color: var(--color-text); /* Memastikan teks tetap terbaca */
+}
+
+.quote {
+font-style: italic;
+margin-bottom: 2em;
+}
+.ampersand {
+display: block;
+font-family: 'Playfair Display', serif;
+font-size: 3em;
+margin: 15px 0;
+color: var(--color-primary);
+}
+.couple-detail {
+margin-bottom: 20px;
+}
+/* =================================== */
+/* 4. COUNTDOWN */
+/* =================================== */
+.countdown-section {
+background-color: var(--color-secondary);
+}
+.countdown-grid {
+display: flex;
+justify-content: center;
+gap: 15px;
+}
+.countdown-grid .box {
+background: var(--color-background);
+padding: 15px;
+border-radius: 8px;
+min-width: 60px;
+}
+.countdown-grid .value {
+font-size: 2em;
+font-weight: bold;
+color: var(--color-primary);
+}
+.countdown-grid .label {
+font-size: 0.8em;
+text-transform: uppercase;
+margin-top: 5px;
+}
+
+/* =================================== */
+/* 5. ACARA */
+/* =================================== */
+.event-card {
+background: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+margin-bottom: 20px;
+}
+.map-container {
+margin: 20px auto;
+width: 100%; 
+border: 5px solid var(--color-primary); 
+border-radius: 10px;
+overflow: hidden;
+}
+.map-container iframe {
+width: 100%; 
+height: 350px; 
+display: block; 
+}
+
+/* =================================== */
+/* 6. GALERI & LIGHTBOX */
+/* =================================== */
+.gallery-full-width {
+    display: flex; /* Menggunakan flexbox untuk menata gambar */
+    flex-wrap: wrap; /* Memungkinkan gambar untuk membungkus ke baris berikutnya jika perlu */
+    gap: 10px; /* Jarak antar gambar */
+    margin-left: -20px; /* Untuk membuat gambar benar-benar full width jika ada padding di section-padded */
+    margin-right: -20px; /* Untuk membuat gambar benar-benar full width jika ada padding di section-padded */
+}
+
+.gallery-full-width img {
+    width: 100%; /* Membuat setiap gambar mengisi lebar penuh kontainer */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+}
+
+
+@media (min-width: 768px) { 
+    .gallery-full-width img {
+        width: calc(50% - 5px); 
+    }
+}
+
+
+.lightbox {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.9);
+display: none;
+justify-content: center;
+align-items: center;
+z-index: 2000;
+}
+.lightbox.show { display: flex; }
+.lightbox-content {
+max-width: 90%;
+max-height: 90%;
+margin: auto;
+display: block;
+}
+.lightbox-close {
+position: absolute;
+top: 20px;
+right: 35px;
+color: #fff;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+opacity: 0.8;
+}
+
+/* =================================== */
+/* 7. UCAPAN & DOA */
+/* =================================== */
+#doaForm {
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 400px;
+margin: 0 auto 30px;
+padding: 20px;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+#doaForm input, #doaForm textarea {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-family: inherit;
+}
+.ucapan-list {
+text-align: left;
+max-width: 600px;
+margin: auto;
+}
+.ucapan-item {
+padding: 15px;
+border-bottom: 1px dashed #ccc;
+}
+.ucapan-item:last-child {
+border-bottom: none;
+}
+.ucapan-item div {
+margin-top: 5px;
+}
+/* =================================== */
+/* 3. HOME & PASANGAN (MODIFIKASI BACKGROUND & TEKS) */
+/* =================================== */
+#home { 
+    /* ... (Atribut background tetap) ... */
+    background-image: url('000308-00_ucapan-selamat-menikah-kristen_pasangan-menikah_800x450_cc0-min.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 80px 20px; 
+    min-height: 400px; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay tetap 0.3 agar gambar nampak */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* DIGANTI: Warna overlay menjadi hitam (0.4) untuk kontras yang lebih baik pada teks putih */
+    z-index: 1;
+}
+
+/* PERUBAHAN UTAMA: Membuat teks menjadi putih dan menambahkan bayangan */
+#home h2, 
+#home .quote, 
+#home .couple-detail h3, 
+#home .couple-detail p, 
+#home .ampersand {
+    position: relative; 
+    z-index: 2;
+    color: #e6ea07; /* DIUBAH: Warna teks menjadi putih */
+    /* Menambahkan bayangan halus agar teks benar-benar menonjol */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); 
+}
+
+/* Pastikan h2 dan ampersand tetap menggunakan warna primary untuk aksen yang jelas di atas bayangan hitam */
+#home h2, #home .ampersand {
+    color: var(--color-primary); 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
