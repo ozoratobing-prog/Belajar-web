@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Kami | [Nama & Pasangan]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="Here I Bow Official Lyric Video   Brian  Jenn Johnson  After All These Years.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio.
+    </audio>
+
+    <section id="cover" class="section-cover">
+        <div class="cover-content">
+            <p class="greeting">The Wedding Of</p>
+            <h1>Ucok & Butet</h1>
+            <p class="date">Sabtu, 25 Oktober 2025</p>
+            <p id="tamuUndangan" class="to-text">Kepada Yth. Bapak/Ibu/Sdr/i</p>
+            <strong class="guest-name">Tamu Undangan</strong>
+            <button id="bukaUndangan" class="btn btn-primary">
+                <i class="icon-mail"></i> Buka Undangan
+            </button>
+        </div>
+    </section>
+
+    <div id="mainContent" class="hidden">
+        
+        <nav class="main-nav">
+            <button id="playMusic" class="btn-icon">🎵 Musik</button>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#event">Acara</a>
+                <a href="#gallery">Galeri</a>
+                <a href="#ucapan">Ucapan</a>
+            </div>
+        </nav>
+
+        <section id="home" class="section-padded">
+            <h2>Pernikahan Kami</h2>
+            <p class="quote">"Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan.
+                <br> Hendaklah damai sejahtera Kristus memerintah dalam hatimu, karena untuk itulah kamu telah dipanggil menjadi satu tubuh. Dan bersyukurlah."
+<br> Kolose 3 : 14 - 15</p>
+            <div class="couple-detail">
+                <h3>Ucok Silalahi</h3>
+                <p>Putra dari Bapak Bambang Silalahi & Ibu Lili Silitonga</p>
+            </div>
+            <span class="ampersand">&</span>
+            <div class="couple-detail">
+                <h3>Butet Sihombing</h3>
+                <p>Putri dari Bapak Putra Sihombing & Ibu Santi Br Simatupang</p>
+            </div>
+        </section>
+
+        <section class="section-padded countdown-section">
+            <h2>Hitung Mundur</h2>
+            <div id="countdown" class="countdown-grid">
+                </div>
+        </section>
+
+        <section id="event" class="section-padded">
+            <h2>Waktu & Tempat</h2>
+            <div class="event-card">
+                <h3>Pemberkatan Nikah & Acara</h3>
+                <p>Sabtu, 25 Oktober 2025</p>
+                <p>Pukul 10:00 - 11:30 WIB</p>
+                <p>Gedung Golden Prawn 933</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://maps.google.com/maps?width=600&height=400&hl=en&q=golden%20prawn%20933&t=&z=14&ie=UTF8&iwloc=B&output=embed" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <a href="https://www.google.com/maps/place/Golden+Prawn+933/@1.1600883,104.0347616,17z/data=!4m15!1m8!3m7!1s0x31d989c12f8cd08b:0x22ede5124ff2e889!2sJl.+Golden+Prawn,+Tj.+Buntung,+Kec.+Bengkong,+Kota+Batam,+Kepulauan+Riau!3b1!8m2!3d1.1600722!4d104.0347723!16s%2Fg%2F1hm3p1sf8!3m5!1s0x31d989c6dc78aff1:0x8afe85ba8fdb2587!8m2!3d1.159912!4d104.037245!16s%2Fg%2F1yh4g683w?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline">Lihat di Google Maps</a>
+        </section>
+
+        <section id="gallery" class="section-padded">
+    <h2>Galeri Foto</h2>
+    <div class="gallery-full-width">
+        <img src="Prewed-Batak-04-1024x698.jpg" alt="Foto Prewed 1" class="glight">
+        <img src="Prewed-Batak-05.jpg" alt="Foto Prewed 2" class="glight">
+    </div>
+</section>
+
+        <section id="ucapan" class="section-padded">
+            <h2>Kirim Ucapan & Doa</h2>
+            <form id="doaForm">
+                <input type="text" id="namaDoa" placeholder="Nama Anda" required>
+                <textarea id="pesanDoa" placeholder="Tuliskan Ucapan & Doa Terbaik" required></textarea>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+            <div id="ucapanList" class="ucapan-list">
+                </div>
+        </section>
+
+        <section class="section-padded">
+            <p class="closing">Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+            <p>Terima Kasih</p>
+            <h3>Ucok & Butet</h3>
+        </section>
+
+    </div>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <span id="lightboxClose" class="lightbox-close">×</span>
+        <img id="lightboxImg" class="lightbox-content" alt="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
